@@ -1,26 +1,39 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <Header />
+  <div class="container">
+    <!-- <Demo /> -->
+    <TableData />
+    <router-view />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from "./components/Header";
+// import Demo from "./components/Demo";
 
 export default {
-  name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    Header,
+    // Demo,
+  },
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.navbar-expand-lg {
+  background: #091424;
+  box-shadow: 0 0 4px 0 rgb(9 20 36);
+}
+body {
+  background: #222831;
+}
+.card {
+  background: #1a1d24;
+}
+.card-body {
+  color: #f9ffee;
+}
+.card-body a {
+  color: #efbb35;
 }
 </style>
